@@ -2,6 +2,8 @@
 #include "GerenciadorGrafico.h"
 #include "Jogador.h"
 #include "Inim_Facil.h"
+#include "Inim_Medio.h"
+#include "Chefao.h"
 #include "Gerenciador_Colisoes.h"
 #include "Menu.h"
 
@@ -11,6 +13,8 @@ private:
     GerenciadorGrafico GG;
     Jogador jogador;
     Inim_Facil inimigo;
+    Inim_Medio inimigoMedio;
+    Chefao chefao;
     Gerenciador_Colisoes GC;
     Menu menu;
     bool menua;

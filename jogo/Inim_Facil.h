@@ -3,19 +3,22 @@
 
 class Inim_Facil : public Inimigo
 {
-    private:
-        sf::RectangleShape Retangulo;
+private:
+    sf::RectangleShape Retangulo;
+    float raio;
+    float velX;
 
-    public:
-        Inim_Facil();
-        ~Inim_Facil();
-        sf::FloatRect getLados()
-        {
-            return Retangulo.getGlobalBounds();
-        }
+public:
+    Inim_Facil();
+    ~Inim_Facil();
 
-        sf::RectangleShape& getRetangulo() { return Retangulo; }
-        void mover();
-        void executar();
-        void salvar();
+    sf::FloatRect getLados()
+    {
+        return Retangulo.getGlobalBounds();
+    }
+
+    sf::RectangleShape& getRetangulo() { return Retangulo; }
+    void mover();
+    void executar();
+    void salvar();
 };
