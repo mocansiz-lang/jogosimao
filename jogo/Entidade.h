@@ -17,6 +17,7 @@ public:
     virtual void executar() = 0;
     virtual void salvar() = 0;
 
-
-
+    virtual void setPoint(float px, float py);
+    int getX() const { return x; }
+    int getY() const { return y; }
 };
