@@ -1,5 +1,5 @@
 #include "Jogador.h"
-#include "Inim_Facil.h"
+#include "Claude_Easy.h"
 
 Jogador::Jogador() : Personagem(10, "Jogador"), cooldownDano(0)
 {

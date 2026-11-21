@@ -7,20 +7,20 @@
 Jogo::Jogo() :
     GG(),
     jogador(),
-    inimigo(),
-    inimigoMedio(),
-    inimigoDificil(),
-    chefao(),
+    claude(),
+    gemini(),
+    copilot(),
+    fable(),
     GC(&jogador),
     menu(this),
     menua(true),
     fonteCarregada(false)
 {
     Ente::setGG(&GG);
-    GC.incluirInimigo(&inimigo);
-    GC.incluirInimigo(&inimigoMedio);
-    GC.incluirInimigo(&inimigoDificil);
-    GC.incluirInimigo(&chefao);
+    GC.incluirInimigo(&claude);
+    GC.incluirInimigo(&gemini);
+    GC.incluirInimigo(&copilot);
+    GC.incluirInimigo(&fable);
 
 #if SFML_VERSION_MAJOR >= 3
     fonteCarregada = fonte.openFromFile("C:/Windows/Fonts/arial.ttf") ||
@@ -129,10 +129,10 @@ void Jogo::executar()
 #endif
 
             jogador.executar();
-            if (inimigo.estaVivo()) inimigo.executar();
-            if (inimigoMedio.estaVivo()) inimigoMedio.executar();
-            if (inimigoDificil.estaVivo()) inimigoDificil.executar();
-            if (chefao.estaVivo()) chefao.executar();
+            if (claude.estaVivo()) claude.executar();
+            if (gemini.estaVivo()) gemini.executar();
+            if (copilot.estaVivo()) copilot.executar();
+            if (fable.estaVivo()) fable.executar();
 
             GC.executar();
 
@@ -145,16 +145,16 @@ void Jogo::executar()
             GG.getWindow()->clear(sf::Color::Black);
 
             jogador.desenhar();
-            if (inimigo.estaVivo()) inimigo.desenhar();
-            if (inimigoMedio.estaVivo()) inimigoMedio.desenhar();
-            if (inimigoDificil.estaVivo()) inimigoDificil.desenhar();
-            if (chefao.estaVivo()) chefao.desenhar();
+            if (claude.estaVivo()) claude.desenhar();
+            if (gemini.estaVivo()) gemini.desenhar();
+            if (copilot.estaVivo()) copilot.desenhar();
+            if (fable.estaVivo()) fable.desenhar();
 
             desenharVida(&jogador);
-            desenharVida(&inimigo);
-            desenharVida(&inimigoMedio);
-            desenharVida(&inimigoDificil);
-            desenharVida(&chefao);
+            desenharVida(&claude);
+            desenharVida(&gemini);
+            desenharVida(&copilot);
+            desenharVida(&fable);
 
             if (fonteCarregada)
             {
