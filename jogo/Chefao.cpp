@@ -1,7 +1,7 @@
 #include "Chefao.h"
 #include "GerenciadorGrafico.h"
 
-Chefao::Chefao() : Inimigo(10, 5), forca(3), emFuria(false), velX(2.0f)
+Chefao::Chefao() : Inimigo(10, 5, "fable(boss)"), forca(3), emFuria(false), velX(2.0f)
 {
     Retangulo.setSize(sf::Vector2f(95.f, 95.f));
     Retangulo.setFillColor(sf::Color::Magenta);

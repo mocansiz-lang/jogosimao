@@ -47,7 +47,7 @@ void Jogo::menub()
     menua = true;
 }
 
-void Jogo::desenharVida(Personagem* p, const std::string& nome)
+void Jogo::desenharVida(Personagem* p)
 {
     if (p == nullptr || !p->estaVivo())
     {
@@ -94,7 +94,7 @@ void Jogo::desenharVida(Personagem* p, const std::string& nome)
         sf::Text textoVida;
         textoVida.setFont(fonte);
 #endif
-        textoVida.setString(nome + ": " + std::to_string(p->getNumVidas()));
+        textoVida.setString(p->getNome() + ": " + std::to_string(p->getNumVidas()));
         textoVida.setCharacterSize(13);
         textoVida.setFillColor(sf::Color::White);
         textoVida.setPosition(sf::Vector2f(barX, std::max(2.f, barY - 17.f)));
@@ -150,11 +150,11 @@ void Jogo::executar()
             if (inimigoDificil.estaVivo()) inimigoDificil.desenhar();
             if (chefao.estaVivo()) chefao.desenhar();
 
-            desenharVida(&jogador, "Jogador");
-            desenharVida(&inimigo, "Facil");
-            desenharVida(&inimigoMedio, "Medio");
-            desenharVida(&inimigoDificil, "Dificil");
-            desenharVida(&chefao, "Chefao");
+            desenharVida(&jogador);
+            desenharVida(&inimigo);
+            desenharVida(&inimigoMedio);
+            desenharVida(&inimigoDificil);
+            desenharVida(&chefao);
 
             if (fonteCarregada)
             {

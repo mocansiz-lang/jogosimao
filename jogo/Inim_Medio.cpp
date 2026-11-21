@@ -1,7 +1,7 @@
 #include "Inim_Medio.h"
 #include "GerenciadorGrafico.h"
 
-Inim_Medio::Inim_Medio() : Inimigo(3, 2), velX(1.5f)
+Inim_Medio::Inim_Medio() : Inimigo(3, 2, "gemini(medio)"), velX(1.5f)
 {
     Retangulo.setSize(sf::Vector2f(60.f, 60.f));
     Retangulo.setFillColor(sf::Color::Yellow);

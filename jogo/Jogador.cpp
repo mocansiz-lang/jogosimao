@@ -1,7 +1,7 @@
 #include "Jogador.h"
 #include "Inim_Facil.h"
 
-Jogador::Jogador() : Personagem(10), cooldownDano(0)
+Jogador::Jogador() : Personagem(10, "Jogador"), cooldownDano(0)
 {
     circulo.setRadius(50.f);
     circulo.setFillColor(sf::Color::Green);

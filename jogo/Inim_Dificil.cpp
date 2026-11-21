@@ -1,7 +1,7 @@
 #include "Inim_Dificil.h"
 #include "GerenciadorGrafico.h"
 
-Inim_Dificil::Inim_Dificil() : Inimigo(5, 3), velX(2.5f), velY(1.5f)
+Inim_Dificil::Inim_Dificil() : Inimigo(5, 3, "copilot(dificil)"), velX(2.5f), velY(1.5f)
 {
     Retangulo.setSize(sf::Vector2f(70.f, 70.f));
     Retangulo.setFillColor(sf::Color::Cyan);

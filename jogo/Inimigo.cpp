@@ -1,8 +1,8 @@
 #include "Inimigo.h"
 #include "Jogador.h"
 
-Inimigo::Inimigo(int vidas, int maldade) :
-    Personagem(vidas), nivel_maldade(maldade)
+Inimigo::Inimigo(int vidas, int maldade, const std::string& nomeInim) :
+    Personagem(vidas, nomeInim), nivel_maldade(maldade)
 {
 }
 

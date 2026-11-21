@@ -24,7 +24,7 @@ private:
     sf::Font fonte;
     bool fonteCarregada;
 
-    void desenharVida(Personagem* p, const std::string& nome);
+    void desenharVida(Personagem* p);
 
 public:
     Jogo();

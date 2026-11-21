@@ -1,6 +1,7 @@
 #include "Personagem.h"
 
-Personagem::Personagem(int vidas) : num_vidas(vidas), max_vidas(vidas)
+Personagem::Personagem(int vidas, const std::string& nomePers) :
+    num_vidas(vidas), max_vidas(vidas), nome(nomePers)
 {
 }
 
@@ -25,6 +26,16 @@ void Personagem::setNumVidas(int v)
     {
         max_vidas = v;
     }
+}
+
+const std::string& Personagem::getNome() const
+{
+    return nome;
+}
+
+void Personagem::setNome(const std::string& n)
+{
+    nome = n;
 }
 
 void Personagem::tomarDano(int dano)

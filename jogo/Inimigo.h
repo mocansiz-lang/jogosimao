@@ -9,7 +9,7 @@ protected:
     int nivel_maldade;
 
 public:
-    Inimigo(int vidas = 1, int maldade = 1);
+    Inimigo(int vidas = 1, int maldade = 1, const std::string& nomeInim = "Inimigo");
     virtual ~Inimigo();
 
     int getNivelMaldade() const;
